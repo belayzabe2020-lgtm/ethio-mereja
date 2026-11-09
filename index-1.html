@@ -1240,7 +1240,7 @@ const AUTH_EMAIL_DOMAIN = 'auth.ethio-mereja.local';
 
 // Optional: address of a static data.json (GitHub Pages / Cloudflare Pages). When set, every visitor reads the public
 // data from that free CDN file and Supabase is not contacted at all for guests. Leave empty to use Supabase directly.
-const PUBLIC_DATA_URL = '';
+const PUBLIC_DATA_URL = 'https://belayzabe2020-lgtm.github.io/ethio-mereja/data.json';
 
 window.__readGuestFavs = function () {
     try { const a = JSON.parse(localStorage.getItem('ethioMerejaFavorites_v1') || '[]'); return Array.isArray(a) ? [...new Set(a.map(String))] : []; } catch (_) { return []; }
