@@ -241,8 +241,7 @@ html, body { overscroll-behavior-y: contain !important; }
 </div>
 <div class="relative z-10 w-full space-y-3 mb-3">
 <button onclick="startApp()" class="w-full py-3.5 bg-white text-[#075bd8] font-extrabold rounded-2xl shadow-xl active:scale-[.98]"><span id="splash-start-btn">አገልግሎቱን ጀምር</span> <i class="fa-solid fa-arrow-right ml-1"></i></button>
-<button onclick="navigateTo('login')" class="w-full py-3 bg-white/15 text-white font-bold rounded-2xl border border-white/30 backdrop-blur">መለያ አለዎት? ይግቡ</button>
-<p class="text-center text-[11px] text-white/80">ምዝገባ አያስፈልግም — ወዲያውኑ ይጠቀሙ</p>
+<p class="app-credit text-center text-[11px] text-white/70 pt-1 select-none">App Creator By EYOB</p>
 </div>
 </section>
 
@@ -398,6 +397,15 @@ html, body { overscroll-behavior-y: contain !important; }
                             <span class="text-[11px] font-extrabold text-red-600 mt-0.5">939</span>
                         </a>
                     </div>
+
+                    <div class="mt-2.5 bg-amber-50 border border-amber-200 rounded-2xl p-2.5 text-[11px] text-amber-800 leading-relaxed">
+                        <i class="fa-solid fa-circle-info mr-1"></i> እባክዎ የአደጋ ጊዜ ቁጥሮችን ለእውነተኛ አደጋ ብቻ ይጠቀሙ።
+                    </div>
+                    <div class="mt-2 bg-white border border-red-200 rounded-2xl p-2.5 space-y-1">
+                        <h4 class="text-xs font-bold text-red-700"><i class="fa-solid fa-truck-medical mr-1"></i>ወደ አምቡላንስ ሲደውሉ</h4>
+                        <p class="text-[11px] text-slate-700 leading-relaxed"><b>ትክክለኛ አድራሻ፦</b> አደጋው የተከሰተበትን ክፍለ ከተማ፣ ወረዳ እና በአቅራቢያ የሚገኝ ታዋቂ መለያ ምልክት (ህንፃ፣ ትምህርት ቤት ወይም ቤተክርስቲያን) ያስረዱ።</p>
+                        <p class="text-[11px] text-slate-700 leading-relaxed"><b>የተጎጂው ሁኔታ፦</b> ህመምተኛው ነፍሰ ጡር ናት? የትራፊክ አደጋ ነው? ወይስ ድንገተኛ የልብ ህመም? የሚለውን መግለጽ ተገቢውን ባለሙያ የያዘ አምቡላንስ ለመላክ ይረዳል።</p>
+                    </div>
                 </div>
 
                 <!-- Announcements (below Emergency) -->
@@ -424,6 +432,7 @@ html, body { overscroll-behavior-y: contain !important; }
                         <!-- Dynamic Service Cards Injected via JS -->
                     </div>
                 </div>
+            <p class="app-credit text-center text-[11px] text-slate-400 py-3 select-none">App Creator By EYOB</p>
             </section>
 
             <!-- 6. SERVICE BRANCHES VIEW -->
@@ -507,7 +516,7 @@ html, body { overscroll-behavior-y: contain !important; }
             <!-- 11. EMERGENCY HOTLINES VIEW -->
             <section id="view-emergency" class="page-view p-4 hidden space-y-4 pb-20">
                 <div class="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm">
-                    <button onclick="navigateTo('menu')" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
+                    <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
                     <div>
@@ -540,92 +549,15 @@ html, body { overscroll-behavior-y: contain !important; }
                     </a>
                 </div>
 
-                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-3 text-[11px] text-amber-800 leading-relaxed">
-                    <i class="fa-solid fa-circle-info mr-1"></i> እባክዎ የአደጋ ጊዜ ቁጥሮችን ለእውነተኛ አደጋ ብቻ ይጠቀሙ።
-                </div>
-
-                <div class="bg-white border border-red-200 rounded-2xl p-3 space-y-1.5">
-                    <h4 class="text-xs font-bold text-red-700"><i class="fa-solid fa-truck-medical mr-1"></i>ወደ አምቡላንስ ሲደውሉ</h4>
-                    <p class="text-[11px] text-slate-700 leading-relaxed"><b>ትክክለኛ አድራሻ፦</b> አደጋው የተከሰተበትን ክፍለ ከተማ፣ ወረዳ እና በአቅራቢያ የሚገኝ ታዋቂ መለያ ምልክት (ህንፃ፣ ትምህርት ቤት ወይም ቤተክርስቲያን) ያስረዱ።</p>
-                    <p class="text-[11px] text-slate-700 leading-relaxed"><b>የተጎጂው ሁኔታ፦</b> ህመምተኛው ነፍሰ ጡር ናት? የትራፊክ አደጋ ነው? ወይስ ድንገተኛ የልብ ህመም? የሚለውን መግለጽ ተገቢውን ባለሙያ የያዘ አምቡላንስ ለመላክ ይረዳል።</p>
-                </div>
+                
             </section>
 
             <!-- 12. MENU VIEW -->
-            <section id="view-menu" class="page-view p-4 hidden space-y-4 pb-20">
-                <h2 class="text-lg font-bold text-slate-900" id="menu-title">ሜኑ እና ቅንብሮች</h2>
-                
-                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-3">
-                    <!-- Language Switch Option -->
-                    <div onclick="openLanguageModal()" class="flex items-center justify-between p-2.5 hover:bg-slate-50 rounded-xl cursor-pointer transition">
-                        <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-blue-100 text-ethio-700 flex items-center justify-center">
-                                <i class="fa-solid fa-language"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-slate-900" id="menu-lang-title">ቋንቋ ይምረጡ / Choose Language</h4>
-                                <p class="text-xs text-slate-500" id="menu-lang-cur">አሁናዊ፡ አማርኛ</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
-                    </div>
-
-                    <!-- Profile Link -->
-                    <div id="menu-profile-row" onclick="navigateTo('profile')" class="flex items-center justify-between p-2.5 hover:bg-slate-50 rounded-xl cursor-pointer transition border-t border-slate-100">
-                        <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-green-100 text-green-700 flex items-center justify-center">
-                                <i class="fa-solid fa-user-gear"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-slate-900" id="menu-profile-title">የግል መለያ ማስተካከያ</h4>
-                                <p class="text-xs text-slate-500" id="menu-profile-sub">ስም እና የስልክ ቁጥር መረጃ</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
-                    </div>
-
-                    <!-- Emergency Numbers Overview -->
-                    <div onclick="navigateTo('emergency')" class="flex items-center justify-between p-2.5 hover:bg-slate-50 rounded-xl cursor-pointer transition border-t border-slate-100">
-                        <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-red-100 text-red-700 flex items-center justify-center">
-                                <i class="fa-solid fa-phone-volume"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-slate-900" id="menu-em-title">የአደጋ ጊዜ ስልኮች ማውጫ</h4>
-                                <p class="text-xs text-slate-500" id="menu-em-sub">ፖሊስ፣ አምቡላንስ፣ እሳት አደጋ</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
-                    </div>
-                </div>
-
-<div id="menu-guest-card" class="hidden bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-3">
-                    <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl bg-blue-100 text-ethio-700 flex items-center justify-center"><i class="fa-solid fa-user-plus"></i></div>
-                        <div>
-                            <h4 class="text-sm font-bold text-slate-900">መለያ ይፍጠሩ ወይም ይግቡ</h4>
-                            <p class="text-xs text-slate-500">ተወዳጆችን በሁሉም ስልክ ለማግኘት እና ማስታወቂያዎችን ለማመሳሰል</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-2">
-                        <button onclick="navigateTo('login')" class="flex-1 py-2.5 bg-ethio-700 text-white rounded-xl font-bold text-xs">ግባ</button>
-                        <button onclick="navigateTo('register')" class="flex-1 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold text-xs">ተመዝገብ</button>
-                    </div>
-                </div>
-
-<div id="menu-account-card" class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-3">
-
-                    
-                    <button onclick="logoutUser()" class="w-full py-2.5 bg-red-50 text-red-600 rounded-xl font-bold text-xs hover:bg-red-100 transition flex items-center justify-center gap-2 border border-red-200">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <span id="menu-logout-btn">ከመለያው ውጣ (Logout)</span>
-                    </button>
-                </div>
-            </section>
+            
 
             <!-- 12. USER PROFILE VIEW -->
             <section id="view-profile" class="page-view p-4 hidden space-y-4 pb-20">
-<div class="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm"><button onclick="navigateTo('menu')" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600"><i class="fa-solid fa-arrow-left"></i></button><h2 class="text-base font-bold text-slate-900" id="profile-view-title">የተጠቃሚ መረጃ</h2></div>
+<div class="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm"><button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600"><i class="fa-solid fa-arrow-left"></i></button><h2 class="text-base font-bold text-slate-900" id="profile-view-title">የተጠቃሚ መረጃ</h2></div>
 <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm text-center"><div class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#075bd8] to-[#0b70e8] text-white flex items-center justify-center text-3xl font-extrabold mx-auto mb-3 shadow-md"><span id="profile-avatar-initial">U</span></div><h3 class="text-lg font-bold text-slate-900" id="profile-name">—</h3><span class="inline-block mt-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-[11px] font-bold" id="profile-role-label">የተጠቃሚ መለያ</span></div>
 <button onclick="logoutUser()" class="w-full py-3 bg-red-600 text-white rounded-xl font-bold text-xs shadow-md" id="profile-logout-btn">ከመለያው ውጣ</button>
 </section>
@@ -835,11 +767,6 @@ html, body { overscroll-behavior-y: contain !important; }
                 <span class="text-[10px] font-medium mt-0.5" id="nav-lbl-favorites">ተወዳጅ</span>
             </button>
 
-            <!-- Menu Nav -->
-            <button onclick="navigateTo('menu')" id="nav-btn-menu" class="flex flex-col items-center text-slate-400 hover:text-ethio-700 py-1 px-2 rounded-xl transition">
-                <i class="fa-solid fa-bars text-lg"></i>
-                <span class="text-[10px] font-medium mt-0.5" id="nav-lbl-menu">ሜኑ</span>
-            </button>
         </nav>
 
         <!-- LANGUAGE SELECTION MODAL -->
@@ -1119,10 +1046,7 @@ html, body { overscroll-behavior-y: contain !important; }
             services: JSON.parse(JSON.stringify(initialDefaultServices)),
             branches: JSON.parse(JSON.stringify(initialDefaultBranches)),
             users: [],
-            notifications: [
-                { id: 'n1', title: { am: 'የመብራት አገልግሎት ማስታወቂያ', en: 'Power Interruption Notice', om: 'Beeksisa Humna Ibsaa' }, body: { am: 'በቦሌ ክፍለ ከተማ ለጥገና ሥራ የመብራት አገልግሎት ለ 3 ሰዓት ይቋረጣል።', en: 'Scheduled power maintenance in Bole area for 3 hours.', om: 'Hojii suphaaf Kutaa Magaalaa Booleetti ibsaan ni citaa.' }, read: false, time: '10 ደቂቃ በፊት' },
-                { id: 'n2', title: { am: 'የውሃ መስመር ጥገና', en: 'Water Pipe Maintenance', om: 'Suphaa Uummoo Bishaan' }, body: { am: 'በአቃቂ ቃሊቲ አዲስ የውሃ መስመር ዝርጋታ ተጠናቋል።', en: 'New water pipeline construction completed in Akaki Kality.', om: 'Akaakii Qaallittiitti diriirsinni uummoo haaraa xumurameera.' }, read: true, time: '2 ሰዓት በፊት' }
-            ]
+            notifications: []   // no invented announcements: real ones arrive from the server / data.json
         };
 
         /*
@@ -1240,6 +1164,18 @@ const AUTH_EMAIL_DOMAIN = 'auth.ethio-mereja.local';
 
 // Optional: address of a static data.json (GitHub Pages / Cloudflare Pages). When set, every visitor reads the public
 // data from that free CDN file and Supabase is not contacted at all for guests. Leave empty to use Supabase directly.
+// English / Afaan Oromo names and addresses of the built-in entries, keyed by id.
+// "a" holds the Amharic original: if an admin edits an entry, the edited Amharic text is shown instead of a stale translation.
+const BRANCH_I18N = {"water-01":{"a":["የውሃ አገልግሎት · ማዕከላዊ ዋና መሥሪያ ቤት","አዲስ አበባ · ማዕከላዊ"],"en":["Water Authority · Central Head Office","Addis Ababa · Central"],"om":["Tajaajila Bishaanii · Waajjira Muummee Giddugaleessaa","Finfinnee · Giddugaleessa"]},"water-02":{"a":["የውሃ አገልግሎት · ጉለሌ ቅርንጫፍ","አዲስ አበባ · ጉለሌ"],"en":["Water Authority · Gulele Branch","Addis Ababa · Gulele"],"om":["Tajaajila Bishaanii · Damee Guleelee","Finfinnee · Guleelee"]},"water-03":{"a":["የውሃ አገልግሎት · አዲስ ከተማ ቅርንጫፍ","አዲስ አበባ · አዲስ ከተማ"],"en":["Water Authority · Addis Ketema Branch","Addis Ababa · Addis Ketema"],"om":["Tajaajila Bishaanii · Damee Addis Ketema","Finfinnee · Addis Ketema"]},"water-04":{"a":["የውሃ አገልግሎት · አራዳ ቅርንጫፍ","አዲስ አበባ · አራዳ"],"en":["Water Authority · Arada Branch","Addis Ababa · Arada"],"om":["Tajaajila Bishaanii · Damee Araadaa","Finfinnee · Araadaa"]},"water-05":{"a":["የውሃ አገልግሎት · መገናኛ ቅርንጫፍ","አዲስ አበባ · መገናኛ"],"en":["Water Authority · Megenagna Branch","Addis Ababa · Megenagna"],"om":["Tajaajila Bishaanii · Damee Megenaagna","Finfinnee · Megenaagna"]},"water-06":{"a":["የውሃ አገልግሎት · ጉርድ ሾላ ቅርንጫፍ","አዲስ አበባ · ጉርድ ሾላ"],"en":["Water Authority · Gurd Shola Branch","Addis Ababa · Gurd Shola"],"om":["Tajaajila Bishaanii · Damee Gurd Shoolaa","Finfinnee · Gurd Shoolaa"]},"water-07":{"a":["የውሃ አገልግሎት · ንፋስ ስልክ ቅርንጫፍ","አዲስ አበባ · ንፋስ ስልክ"],"en":["Water Authority · Nifas Silk Branch","Addis Ababa · Nifas Silk"],"om":["Tajaajila Bishaanii · Damee Nifas Silk","Finfinnee · Nifas Silk"]},"water-08":{"a":["የውሃ አገልግሎት · መካኒሳ ቅርንጫፍ","አዲስ አበባ · መካኒሳ"],"en":["Water Authority · Mekanisa Branch","Addis Ababa · Mekanisa"],"om":["Tajaajila Bishaanii · Damee Mekaaniisaa","Finfinnee · Mekaaniisaa"]},"water-09":{"a":["የውሃ አገልግሎት · አቃቂ ቅርንጫፍ","አዲስ አበባ · አቃቂ"],"en":["Water Authority · Akaki Branch","Addis Ababa · Akaki"],"om":["Tajaajila Bishaanii · Damee Akaaqii","Finfinnee · Akaaqii"]},"power-01":{"a":["ማዕከላዊ የደንበኞች ሪፖርት ማድረጊያ","ማዕከላዊ የጥሪ እና የአደጋ ጊዜ ማዕከል"],"en":["Central customer reporting line","Central call and emergency center"],"om":["Lakkoofsa gabaasa maamilaa giddugaleessaa","Wiirtuu bilbilaa fi yeroo hatattamaa giddugaleessaa"]},"power-02":{"a":["የጽሁፍ መልዕክት (SMS) ማዕከል","ማዕከላዊ የጥሪ እና የአደጋ ጊዜ ማዕከል"],"en":["Text message (SMS) center","Central call and emergency center"],"om":["Wiirtuu ergaa gabaabaa (SMS)","Wiirtuu bilbilaa fi yeroo hatattamaa giddugaleessaa"]},"power-03":{"a":["የምስራቅ አዲስ አበባ ሪጅን","አዲስ አበባ · ቦሌ፣ የካ እና ለሚ ኩራ ክፍለ ከተማዎች"],"en":["East Addis Ababa Region","Addis Ababa · Bole, Yeka and Lemi Kura sub-cities"],"om":["Naannoo Finfinnee Bahaa","Finfinnee · Aanaalee Boolee, Yeekaa fi Lammii Kuraa"]},"power-04":{"a":["የሰሜን አዲስ አበባ ሪጅን","አዲስ አበባ · ጉለሌ፣ አራዳ እና አዲስ ከተማ ክፍለ ከተማዎች"],"en":["North Addis Ababa Region","Addis Ababa · Gulele, Arada and Addis Ketema sub-cities"],"om":["Naannoo Finfinnee Kaabaa","Finfinnee · Aanaalee Guleelee, Araadaa fi Addis Ketema"]},"power-05":{"a":["የደቡብ አዲስ አበባ ሪጅን","አዲስ አበባ · ቂርቆስ፣ ልደታ እና አቃቂ ቃሊቲ ክፍለ ከተማዎች"],"en":["South Addis Ababa Region","Addis Ababa · Kirkos, Lideta and Akaki Kality sub-cities"],"om":["Naannoo Finfinnee Kibbaa","Finfinnee · Aanaalee Kirkoos, Liidataa fi Akaaqii Qaaliitii"]},"power-06":{"a":["የምዕራብ አዲስ አበባ ሪጅን","አዲስ አበባ · ኮልፌ ቀራንዮ እና ንፋስ ስልክ ላፍቶ ክፍለ ከተማዎች"],"en":["West Addis Ababa Region","Addis Ababa · Kolfe Keranio and Nifas Silk-Lafto sub-cities"],"om":["Naannoo Finfinnee Dhihaa","Finfinnee · Aanaalee Kolfee Qaraanyoo fi Nifas Silk-Laaftoo"]},"power-07":{"a":["የዲጂታል ቆጣሪ እና የቴክኒክ ድጋፍ ጥያቄዎች ማስተናገጃ","ልዩ አገልግሎት"],"en":["Digital meter and technical support requests","Special service"],"om":["Gaaffii mitira dijitaalaa fi deeggarsa teeknikaa","Tajaajila addaa"]},"power-08":{"a":["የኮርፖሬት እና የከፍተኛ ደንበኞች የድጋፍ መስመር","ኢንዱስትሪዎች እና ትላልቅ ተቋማት"],"en":["Corporate and key-customer support line","Industries and large institutions"],"om":["Lakkoofsa deeggarsa dhaabbilee fi maamiltoota guguddoo","Industiriiwwan fi dhaabbilee gurguddoo"]},"telecom-01":{"a":["ዋናው የደንበኞች አገልግሎት ማዕከል","ኢትዮ ቴሌኮም · ማዕከላዊ የጥሪ ማዕከል"],"en":["Main customer service center","Ethio Telecom · Central call center"],"om":["Wiirtuu tajaajila maamilaa ijoo","Itoyo Telekoom · Wiirtuu bilbilaa giddugaleessaa"]},"telecom-02":{"a":["የነጻ የጽሁፍ መልዕክት (SMS) ማዕከል","ኢትዮ ቴሌኮም · ማዕከላዊ የጥሪ ማዕከል"],"en":["Free text message (SMS) center","Ethio Telecom · Central call center"],"om":["Wiirtuu ergaa gabaabaa (SMS) bilisaa","Itoyo Telekoom · Wiirtuu bilbilaa giddugaleessaa"]},"telecom-03":{"a":["የቴሌብር የደንበኞች ድጋፍ ማዕከል","ኢትዮ ቴሌኮም · ማዕከላዊ የጥሪ ማዕከል"],"en":["Telebirr customer support center","Ethio Telecom · Central call center"],"om":["Wiirtuu deeggarsa maamilaa Telebirr","Itoyo Telekoom · Wiirtuu bilbilaa giddugaleessaa"]},"telecom-04":{"a":["የፕሪሚየም / የከፍተኛ ደንበኞች ማዕከል","ኢትዮ ቴሌኮም · ማዕከላዊ የጥሪ ማዕከል"],"en":["Premium / key-customer center","Ethio Telecom · Central call center"],"om":["Wiirtuu maamiltoota addaa (Premium)","Itoyo Telekoom · Wiirtuu bilbilaa giddugaleessaa"]},"telecom-05":{"a":["የኢትዮ ገበታ የጥቅል መግዣ ኮድ","USSD አጭር ኮድ"],"en":["Ethio Gebeta package purchase code","USSD short code"],"om":["Koodii bittaa paakeejii Itoyo Gebeta","Koodii gabaabaa USSD"]},"telecom-06":{"a":["የቴሌብር አገልግሎት መቆጣጠሪያ ኮድ","USSD አጭር ኮድ"],"en":["Telebirr service control code","USSD short code"],"om":["Koodii to’annoo tajaajila Telebirr","Koodii gabaabaa USSD"]},"telecom-07":{"a":["ቀሪ ሂሳብን (Balance) ለመፈተሽ","USSD አጭር ኮድ"],"en":["Check your balance","USSD short code"],"om":["Haftee (Balance) ilaaluuf","Koodii gabaabaa USSD"]},"telecom-08":{"a":["ካርድ ለመሙላት (ለራስም ሆነ ለሌላ ሰው)","USSD አጭር ኮድ"],"en":["Recharge a card (for yourself or someone else)","USSD short code"],"om":["Kaardii guutuuf (ofiif ykn nama biraaf)","Koodii gabaabaa USSD"]},"telecom-09":{"a":["ሂሳብ (ኤርታይም) ለሌላ ሰው ለማስተላለፍ","USSD አጭር ኮድ"],"en":["Transfer airtime to someone else","USSD short code"],"om":["Airtime nama biraaf dabarsuuf","Koodii gabaabaa USSD"]},"telecom-10":{"a":["መልሰው ይደውሉልኝ (Call me back) መልዕክት ለመላክ","USSD አጭር ኮድ · *807*የስልክ ቁጥር#  ብለው ይደውሉ"],"en":["Send a \"Call me back\" message","USSD short code · dial *807*phone number#"],"om":["Ergaa \"Na deebisii bilbili\" ergu","Koodii gabaabaa USSD · *807*lakkoofsa bilbilaa# jedhii bilbili"]},"police-01":{"a":["የፌደራልና የከተማ ፖሊስ ኮማንድ ፖስት","ሁሉን አቀፍ የድንገተኛ አደጋ ነጻ መስመር"],"en":["Federal and city police command post","All-purpose free emergency line"],"om":["Poolisii Federaalaa fi Magaalaa Giddugala Ajajaa","Lakkoofsa bilisaa yeroo hatattamaa waliigalaa"]},"police-02":{"a":["የአዲስ አበባ ትራፊክ ፖሊስ መቆጣጠሪያ መምሪያ","አዲስ አበባ · የትራፊክ አደጋዎችንና መጨናነቆችን ሪፖርት ማድረጊያ"],"en":["Addis Ababa Traffic Police Control Department","Addis Ababa · Report traffic accidents and congestion"],"om":["Muummee To’annoo Poolisii Tiraafikaa Finfinnee","Finfinnee · Balaa tiraafikaa fi cinqamiinsa gabaasuuf"]},"police-03":{"a":["የፌደራል ፖሊስ ፈጣን ደራሽ ኃይል","ፌደራል ፖሊስ"],"en":["Federal Police Rapid Response Force","Federal Police"],"om":["Humna Gargaarsa Si’ataa Poolisii Federaalaa","Poolisii Federaalaa"]},"police-04":{"a":["ቦሌ ክፍለ ከተማ ፖሊስ መምሪያ","አዲስ አበባ · ቦሌ መድኃኔዓለም አካባቢ"],"en":["Bole Sub-city Police Department","Addis Ababa · Bole Medhanialem area"],"om":["Muummee Poolisii Aanaa Boolee","Finfinnee · Naannoo Boolee Medhaanyaalem"]},"police-05":{"a":["የካ ክፍለ ከተማ ፖሊስ መምሪያ","አዲስ አበባ · መገናኛ አካባቢ"],"en":["Yeka Sub-city Police Department","Addis Ababa · Megenagna area"],"om":["Muummee Poolisii Aanaa Yeekaa","Finfinnee · Naannoo Megenaagna"]},"police-06":{"a":["ለሚ ኩራ ክፍለ ከተማ ፖሊስ መምሪያ","አዲስ አበባ · አያት / ኮንዶሚኒየም አካባቢ"],"en":["Lemi Kura Sub-city Police Department","Addis Ababa · Ayat / condominium area"],"om":["Muummee Poolisii Aanaa Lammii Kuraa","Finfinnee · Naannoo Ayaat / kondominiyeemii"]},"police-07":{"a":["አራዳ ክፍለ ከተማ ፖሊስ መምሪያ","አዲስ አበባ · ፒያሳ አካባቢ"],"en":["Arada Sub-city Police Department","Addis Ababa · Piassa area"],"om":["Muummee Poolisii Aanaa Araadaa","Finfinnee · Naannoo Piyaasaa"]},"police-08":{"a":["ቂርቆስ ክፍለ ከተማ ፖሊስ መምሪያ","አዲስ አበባ · ኦሊምፒያ አካባቢ"],"en":["Kirkos Sub-city Police Department","Addis Ababa · Olympia area"],"om":["Muummee Poolisii Aanaa Kirkoos","Finfinnee · Naannoo Oolimpiyaa"]},"police-09":{"a":["ልደታ ክፍለ ከተማ ፖሊስ መምሪያ","አዲስ አበባ · ሜክሲኮ አካባቢ"],"en":["Lideta Sub-city Police Department","Addis Ababa · Mexico area"],"om":["Muummee Poolisii Aanaa Liidataa","Finfinnee · Naannoo Meksiikoo"]},"police-10":{"a":["ንፋስ ስልክ ላፍቶ ክፍለ ከተማ ፖሊስ መምሪያ","አዲስ አበባ · ሳር ቤት አካባቢ"],"en":["Nifas Silk-Lafto Sub-city Police Department","Addis Ababa · Sarbet area"],"om":["Muummee Poolisii Aanaa Nifas Silk-Laaftoo","Finfinnee · Naannoo Saar Bet"]},"police-11":{"a":["አቃቂ ቃሊቲ ክፍለ ከተማ ፖሊስ መምሪያ","አዲስ አበባ · ቃሊቲ ማሪቲም አካባቢ"],"en":["Akaki Kality Sub-city Police Department","Addis Ababa · Kality Maritime area"],"om":["Muummee Poolisii Aanaa Akaaqii Qaaliitii","Finfinnee · Naannoo Qaaliitii Maariitaayim"]},"police-12":{"a":["ኮልፌ ቀራንዮ ክፍለ ከተማ ፖሊስ መምሪያ","አዲስ አበባ · ጦር ኃይሎች አካባቢ"],"en":["Kolfe Keranio Sub-city Police Department","Addis Ababa · Tor Hailoch (Army) area"],"om":["Muummee Poolisii Aanaa Kolfee Qaraanyoo","Finfinnee · Naannoo Tor Hayiloch"]},"police-13":{"a":["አዲስ ከተማ ክፍለ ከተማ ፖሊስ መምሪያ","አዲስ አበባ · መርካቶ አካባቢ"],"en":["Addis Ketema Sub-city Police Department","Addis Ababa · Merkato area"],"om":["Muummee Poolisii Aanaa Addis Ketema","Finfinnee · Naannoo Merkaatoo"]},"police-14":{"a":["ጉለሌ ክፍለ ከተማ ፖሊስ መምሪያ","አዲስ አበባ · ፓስተር / አዲስ ገበያ አካባቢ"],"en":["Gulele Sub-city Police Department","Addis Ababa · Pastor / Addis Gebeya area"],"om":["Muummee Poolisii Aanaa Guleelee","Finfinnee · Naannoo Paastar / Addis Gabaa"]},"health-01":{"a":["ጥቁር አንበሳ ስፔሻላይዝድ ሆስፒታል","አዲስ አበባ · ልደታ ክፍለ ከተማ፣ ኢሚግሬሽን መሥሪያ ቤት አቅራቢያ"],"en":["Tikur Anbessa (Black Lion) Specialized Hospital","Addis Ababa · Lideta Sub-city, near the Immigration office"],"om":["Hospitaala Addaa Tikur Anbessa (Black Lion)","Finfinnee · Aanaa Liidataa, Waajjira Imigireeshinii bira"]},"health-02":{"a":["ቅዱስ ጳውሎስ ሆስፒታል ሚሊኒየም ሜዲካል ኮሌጅ","አዲስ አበባ · ጉለሌ ክፍለ ከተማ፣ ስዊዝ ወይም ፓስተር ተብሎ በሚጠራው አካባቢ"],"en":["St. Paul’s Hospital Millennium Medical College","Addis Ababa · Gulele Sub-city, the area known as Swiss or Pastor"],"om":["Hospitaala Kolleejjii Mediikaalaa Milleeniyeemii Seent Poolii","Finfinnee · Aanaa Guleelee, naannoo Siwiis ykn Paastar jedhamu"]},"health-03":{"a":["የካቲት 12 ሜዲካል ኮሌጅ ሆስፒታል","አዲስ አበባ · አራዳ ክፍለ ከተማ፣ አራት ኪሎ (ከብርሃንና ሰላም ማተሚያ ቤት ፊት ለፊት)"],"en":["Yekatit 12 Hospital Medical College","Addis Ababa · Arada Sub-city, Arat Kilo (opposite Berhanena Selam Printing House)"],"om":["Hospitaala Kolleejjii Mediikaalaa Yekaatiit 12","Finfinnee · Aanaa Araadaa, Arat Kiilo (Maxxansaa Birhaanaa fi Salaam fuuldura)"]},"health-04":{"a":["ራስ ደስታ ዳምጠው መታሰቢያ ሆስፒታል (Ras Desta)","አዲስ አበባ · አዲስ ከተማ ክፍለ ከተማ፣ ሰባተኛ አካባቢ (ወደ አሜሪካን ግቢ በሚወስደው መንገድ)"],"en":["Ras Desta Damtew Memorial Hospital","Addis Ababa · Addis Ketema Sub-city, Sebategna area (on the road to the American compound)"],"om":["Hospitaala Yaadannoo Raas Dastaa Dammaxaw","Finfinnee · Aanaa Addis Ketema, naannoo Sabbataa (daandii mooraa Ameerikaa geessu irra)"]},"health-05":{"a":["ዘውዲቱ መታሰቢያ ሆስፒታል","አዲስ አበባ · ቂርቆስ ክፍለ ከተማ፣ ፊላሚንጎ ወይም ፍልውሃ አካባቢ (ከውጭ ጉዳይ ሚኒስቴር ወረድ ብሎ)"],"en":["Zewditu Memorial Hospital","Addis Ababa · Kirkos Sub-city, Filwoha or Flamingo area (just down from the Ministry of Foreign Affairs)"],"om":["Hospitaala Yaadannoo Zeewudituu","Finfinnee · Aanaa Kirkoos, naannoo Filwoha ykn Filaamingoo (Ministeera Dhimma Alaa gadi)"]},"health-06":{"a":["ጦር ኃይሎች አጠቃላይ ሆስፒታል","አዲስ አበባ · ኮልፌ ቀራንዮ ክፍለ ከተማ፣ ጦር ኃይሎች አደባባይ አቅራቢያ"],"en":["Armed Forces General Hospital","Addis Ababa · Kolfe Keranio Sub-city, near Tor Hailoch roundabout"],"om":["Hospitaala Waliigalaa Humna Ittisaa","Finfinnee · Aanaa Kolfee Qaraanyoo, marsaa Tor Hayiloch bira"]},"health-07":{"a":["አለርት ሆስፒታል","አዲስ አበባ · ንፋስ ስልክ ላፍቶ ክፍለ ከተማ፣ ዘነበወርቅ (ቃሊቲ መንገድ መታጠፊያ)"],"en":["ALERT Hospital","Addis Ababa · Nifas Silk-Lafto Sub-city, Zenebework (Kality road turning)"],"om":["Hospitaala ALERT","Finfinnee · Aanaa Nifas Silk-Laaftoo, Zeenabeworq (jijjiirraa daandii Qaaliitii)"]},"health-08":{"a":["ኤም.ሲ.ኤም ኮሪያ ሆስፒታል","አዲስ አበባ · ቦሌ ክፍለ ከተማ፣ ገርጂ አካባቢ (ከገርጂ ታክሲ ተራ ወረድ ብሎ)"],"en":["MCM Korea Hospital","Addis Ababa · Bole Sub-city, Gerji area (just below the Gerji taxi stop)"],"om":["Hospitaala MCM Kooriyaa","Finfinnee · Aanaa Boolee, naannoo Gerjii (tarree taaksii Gerjii gadi)"]},"health-09":{"a":["ሀያት ሆስፒታል","አዲስ አበባ · ቦሌ ክፍለ ከተማ፣ ቦሌ መድኃኔዓለም (ከቦሌ ድልድይ ወደ ገርጂ በሚወስደው መንገድ ላይ)"],"en":["Hayat Hospital","Addis Ababa · Bole Sub-city, Bole Medhanialem (on the road from Bole bridge to Gerji)"],"om":["Hospitaala Hayaat","Finfinnee · Aanaa Boolee, Boolee Medhaanyaalem (daandii riqicha Boolee irraa gara Gerjiitti geessu irra)"]},"health-10":{"a":["ላንድማርክ ሆስፒታል","አዲስ አበባ · ልደታ ክፍለ ከተማ፣ መገናኛ ሜክሲኮ አደባባይ (ከገነት ሆቴል ፊት ለፊት)"],"en":["Landmark Hospital","Addis Ababa · Lideta Sub-city, Megenagna Mexico roundabout (opposite Genet Hotel)"],"om":["Hospitaala Landmark","Finfinnee · Aanaa Liidataa, marsaa Meksiikoo (Hoteela Geneet fuuldura)"]},"health-11":{"a":["ኖርዲክ ሜዲካል ሴንተር","አዲስ አበባ · ቂርቆስ ክፍለ ከተማ፣ ፈረንሳይ ኤምባሲ አካባቢ ወይም ላንቻ (ከአፍሪካ ህብረት ጀርባ ባለው መንገድ)"],"en":["Nordic Medical Center","Addis Ababa · Kirkos Sub-city, near the French Embassy or Lancha (road behind the African Union)"],"om":["Wiirtuu Mediikaalaa Nordic","Finfinnee · Aanaa Kirkoos, Ambaasii Faransaay ykn Laanchaa bira (daandii Gamtaa Afrikaa duubaa)"]},"health-12":{"a":["ኖርዲክ ሜዲካል ሴንተር (የራሱ የአደጋ ጊዜ አጭር ቁጥር)","አዲስ አበባ · ቂርቆስ ክፍለ ከተማ፣ ላንቻ"],"en":["Nordic Medical Center (own emergency short number)","Addis Ababa · Kirkos Sub-city, Lancha"],"om":["Wiirtuu Mediikaalaa Nordic (lakkoofsa gabaabaa yeroo hatattamaa)","Finfinnee · Aanaa Kirkoos, Laanchaa"]},"health-13":{"a":["ቅዱስ ገብርኤል አጠቃላይ ሆስፒታል","አዲስ አበባ · ቦሌ ክፍለ ከተማ፣ 22 ማዞሪያ (ከዋናው አስፋልት ዳር)"],"en":["St. Gabriel General Hospital","Addis Ababa · Bole Sub-city, 22 roundabout (beside the main asphalt road)"],"om":["Hospitaala Waliigalaa Seent Gabriyeel","Finfinnee · Aanaa Boolee, marsaa 22 (cinaa daandii asfaaltii ijoo)"]},"health-14":{"a":["አሚን አጠቃላይ ሆስፒታል","አዲስ አበባ · አዲስ ከተማ ክፍለ ከተማ፣ አውቶቡስ ተራ (ከተክለሃይማኖት ወደ መርካቶ በሚወስደው መንገድ)"],"en":["Amin General Hospital","Addis Ababa · Addis Ketema Sub-city, Autobus Tera (on the road from Tekle Haimanot to Merkato)"],"om":["Hospitaala Waliigalaa Amiin","Finfinnee · Aanaa Addis Ketema, Awutobuus Teraa (daandii Tekle Haayimaanoot irraa gara Merkaatootti geessu irra)"]},"ambulance-01":{"a":["የኢትዮጵያ ቀይ መስቀል ማህበር (Red Cross)","በአዲስ አበባ እና በሁሉም የሀገሪቱ ክፍሎች ለድንገተኛ የጤና እክሎች እና አደጋዎች ነጻ አምቡላንስ"],"en":["Ethiopian Red Cross Society","Free ambulance for sudden health problems and accidents in Addis Ababa and all parts of the country"],"om":["Wal-gahii Cuquliisaa Diimaa Itoophiyaa (Red Cross)","Ambulaansii bilisaa rakkoo fayyaa fi balaa tasaa Finfinnee fi naannoowwan biyyattii hundatti"]},"ambulance-02":{"a":["የእናቶችና የወሊድ ድንገተኛ አምቡላንስ ጥሪ ማዕከል","ነፍሰ ጡር እናቶች ምጥ ሲጀምራቸው ወይም ድንገተኛ የጤና አደጋ ሲያጋጥማቸው ነጻ አምቡላንስ"],"en":["Maternal and childbirth emergency ambulance call center","Free ambulance when a pregnant mother goes into labor or has a sudden health emergency"],"om":["Wiirtuu bilbilaa ambulaansii yeroo hatattamaa haadholii fi da’umsaa","Ambulaansii bilisaa yeroo haati ulfaa dhukkubbiin da’umsaa itti jalqabu ykn rakkoon fayyaa tasaa isheen mudatu"]},"ambulance-03":{"a":["የእሳትና ድንገተኛ አደጋ ኮሚሽን አምቡላንስ","አዲስ አበባ · በትራፊክ፣ በእሳት እና በሌሎች ትላልቅ አደጋዎች የተጎዱ ሰዎችን ወደ ህክምና ተቋም ለማንሳት"],"en":["Fire and Emergency Commission ambulance","Addis Ababa · Takes people hurt in traffic, fire and other major accidents to treatment facilities"],"om":["Ambulaansii Komishinii Ibsaa fi Balaa Tasaa","Finfinnee · Namoota balaa tiraafikaa, ibiddaa fi balaa gurguddoo biraan miidhaman gara dhaabbata yaalaatti geessa"]},"ambulance-04":{"a":["የእሳትና ድንገተኛ አደጋ ኮሚሽን አምቡላንስ (አማራጭ መስመር)","አዲስ አበባ · አማራጭ የድንገተኛ አምቡላንስ መስመር"],"en":["Fire and Emergency Commission ambulance (alternative line)","Addis Ababa · Alternative emergency ambulance line"],"om":["Ambulaansii Komishinii Ibsaa fi Balaa Tasaa (lakkoofsa filannoo)","Finfinnee · Lakkoofsa ambulaansii yeroo hatattamaa filannoo"]},"ambulance-05":{"a":["የኖርዲክ ሜዲካል ሴንተር ድንገተኛ አምቡላንስ","የግል ሆስፒታል · አገልግሎቱ የሚከፈልበት ሊሆን ይችላል"],"en":["Nordic Medical Center emergency ambulance","Private hospital · the service may be paid"],"om":["Ambulaansii yeroo hatattamaa Wiirtuu Mediikaalaa Nordic","Hospitaala dhuunfaa · tajaajilichi kaffaltii qabaachuu danda’a"]},"ambulance-06":{"a":["የኢትዮ ጠቢብ አጠቃላይ ሆስፒታል የድንገተኛ አምቡላንስ","የግል ሆስፒታል · አገልግሎቱ የሚከፈልበት ሊሆን ይችላል"],"en":["Ethio Tebib General Hospital emergency ambulance","Private hospital · the service may be paid"],"om":["Ambulaansii yeroo hatattamaa Hospitaala Waliigalaa Itoyo Tebib","Hospitaala dhuunfaa · tajaajilichi kaffaltii qabaachuu danda’a"]},"ambulance-07":{"a":["የቴቦ ሆስፒታል የድንገተኛ አምቡላንስ የጥሪ ማዕከል","የግል ሆስፒታል · አገልግሎቱ የሚከፈልበት ሊሆን ይችላል"],"en":["Tebo Hospital emergency ambulance call center","Private hospital · the service may be paid"],"om":["Wiirtuu bilbilaa ambulaansii yeroo hatattamaa Hospitaala Teboo","Hospitaala dhuunfaa · tajaajilichi kaffaltii qabaachuu danda’a"]},"fire-01":{"a":["ዋናው የአደጋ ጊዜ ጥሪ ማዕከል","ማዕከላዊ የአደጋ ጊዜ ጥሪ መስመር"],"en":["Main emergency call center","Central emergency call line"],"om":["Wiirtuu bilbilaa yeroo hatattamaa ijoo","Lakkoofsa bilbilaa yeroo hatattamaa giddugaleessaa"]},"fire-02":{"a":["አማራጭ የድንገተኛ አደጋ ጥሪ መስመር","ማዕከላዊ የአደጋ ጊዜ ጥሪ መስመር"],"en":["Alternative emergency call line","Central emergency call line"],"om":["Lakkoofsa bilbilaa yeroo hatattamaa filannoo","Lakkoofsa bilbilaa yeroo hatattamaa giddugaleessaa"]},"fire-03":{"a":["ማዕከላዊ (ዋና) እሳት አደጋ ጣቢያ (አራዳ/ቂርቆስ)","አዲስ አበባ · ቸርችል ጎዳና፣ ከኢሚግሬሽን መሥሪያ ቤት ወረድ ብሎ (ከቴአትርና ባህል አዳራሽ አጠገብ)"],"en":["Central (main) fire station (Arada/Kirkos)","Addis Ababa · Churchill Avenue, just down from the Immigration office (next to the Theatre and Culture Hall)"],"om":["Buufata ibsaa ibiddaa giddugaleessaa (ijoo) (Araadaa/Kirkoos)","Finfinnee · Daandii Cheerchil, Waajjira Imigireeshinii gadi (Galma Tiyaatiraa fi Aadaa bira)"]},"fire-04":{"a":["የመርካቶ እሳት አደጋ ጣቢያ (አዲስ ከተማ)","አዲስ አበባ · መርካቶ፣ ከራጉኤል ቤተክርስቲያን ጀርባ ወይም ምዕራብ አውቶቡስ ተራ አቅራቢያ"],"en":["Merkato fire station (Addis Ketema)","Addis Ababa · Merkato, behind Raguel Church or near the West Bus Terminal"],"om":["Buufata ibsaa ibiddaa Merkaatoo (Addis Ketema)","Finfinnee · Merkaatoo, Mana Kiristaanaa Raaguu’eel duubaa ykn Awutobuus Teraa Dhihaa bira"]},"fire-05":{"a":["የቃሊቲ እሳት አደጋ ጣቢያ (አቃቂ ቃሊቲ)","አዲስ አበባ · ቃሊቲ ዋና መንገድ፣ ከኢንዱስትሪ መንደሩ እና ከቃሊቲ መጋዘኖች አቅራቢያ"],"en":["Kality fire station (Akaki Kality)","Addis Ababa · Kality main road, near the industrial village and Kality warehouses"],"om":["Buufata ibsaa ibiddaa Qaaliitii (Akaaqii Qaaliitii)","Finfinnee · Daandii ijoo Qaaliitii, bakka industirii fi mana kuusaa Qaaliitii bira"]},"fire-06":{"a":["የቦሌ እሳት አደጋ ጣቢያ (ቦሌ)","አዲስ አበባ · ቦሌ ቡልቡላ ወይም ከቦሌ ዓለም አቀፍ አውሮፕላን ማረፊያ (ኤርፖርት) የኋላ በር አቅራቢያ"],"en":["Bole fire station (Bole)","Addis Ababa · Bole Bulbula or near the back gate of Bole International Airport"],"om":["Buufata ibsaa ibiddaa Boolee (Boolee)","Finfinnee · Boolee Bulbulaa ykn balbala duubaa Dhaabbata Xiyyaaraa Idil-addunyaa Boolee bira"]},"fire-07":{"a":["የመገናኛ እሳት አደጋ ጣቢያ (የካ / ለሚ ኩራ)","አዲስ አበባ · መገናኛ፣ ወደ ሲኤምሲ በሚወስደው መንገድ (ከየካ ክፍለ ከተማ አስተዳደር ቢሮ ጀርባ)"],"en":["Megenagna fire station (Yeka / Lemi Kura)","Addis Ababa · Megenagna, on the road to CMC (behind the Yeka Sub-city administration office)"],"om":["Buufata ibsaa ibiddaa Megenaagna (Yeekaa / Lammii Kuraa)","Finfinnee · Megenaagna, daandii CMC geessu irra (Waajjira Bulchiinsa Aanaa Yeekaa duubaa)"]},"fire-08":{"a":["የጦር ኃይሎች እሳት አደጋ ጣቢያ (ኮልፌ ቀራንዮ)","አዲስ አበባ · ጦር ኃይሎች አደባባይ አቅራቢያ፣ ወደ ዊንጌት በሚወስደው የውስጥ መስመር ላይ"],"en":["Tor Hailoch fire station (Kolfe Keranio)","Addis Ababa · Near Tor Hailoch roundabout, on the inner road to Wingate"],"om":["Buufata ibsaa ibiddaa Tor Hayiloch (Kolfee Qaraanyoo)","Finfinnee · Marsaa Tor Hayiloch bira, daandii keessaa gara Wingeet geessu irra"]},"fire-09":{"a":["የሳር ቤት እሳት አደጋ ጣቢያ (ንፋስ ስልክ ላፍቶ)","አዲስ አበባ · ሳር ቤት፣ ከአፍሪካ ህብረት አዲስ ህንፃ ጀርባ ወይም ጃሪ አካባቢ"],"en":["Sarbet fire station (Nifas Silk-Lafto)","Addis Ababa · Sarbet, behind the new African Union building or near Jari"],"om":["Buufata ibsaa ibiddaa Saar Bet (Nifas Silk-Laaftoo)","Finfinnee · Saar Bet, ijaarsa haaraa Gamtaa Afrikaa duubaa ykn naannoo Jaarii"]},"municipality-01":{"a":["የቦሌ ክፍለ ከተማ ማዘጋጃ ቤት","አዲስ አበባ · ቦሌ መድኃኔዓለም (ከቦሌ ሪፐብሊክ ሞል ጀርባ)"],"en":["Bole Sub-city Municipality","Addis Ababa · Bole Medhanialem (behind Bole Republic Mall)"],"om":["Waajjira Magaalaa Aanaa Boolee","Finfinnee · Boolee Medhaanyaalem (Mooliin Riipabilik duubaa)"]},"municipality-02":{"a":["የየካ ክፍለ ከተማ ማዘጋጃ ቤት","አዲስ አበባ · ከመገናኛ አደባባይ ወይም ከቀለበት መንገዱ ድልድይ ወደ ኮተቤ/ካራ በሚወስደው ዋና መንገድ"],"en":["Yeka Sub-city Municipality","Addis Ababa · On the main road from Megenagna roundabout or the ring-road bridge toward Kotebe/Kara"],"om":["Waajjira Magaalaa Aanaa Yeekaa","Finfinnee · Daandii ijoo marsaa Megenaagna ykn riqicha daandii marsaa irraa gara Kotebee/Kaaraa geessu irra"]},"municipality-03":{"a":["የለሚ ኩራ ክፍለ ከተማ ማዘጋጃ ቤት","አዲስ አበባ · አያት (አያት አደባባይ ወደ ኮንዶሚኒየም በሚወስደው መንገድ)"],"en":["Lemi Kura Sub-city Municipality","Addis Ababa · Ayat (on the road from Ayat roundabout to the condominiums)"],"om":["Waajjira Magaalaa Aanaa Lammii Kuraa","Finfinnee · Ayaat (daandii marsaa Ayaat irraa gara kondominiyeemii geessu irra)"]},"municipality-04":{"a":["የአራዳ ክፍለ ከተማ ማዘጋጃ ቤት","አዲስ አበባ · ፒያሳ (ከዋናው ማዘጋጃ ቤት ሕንፃ ጎን)"],"en":["Arada Sub-city Municipality","Addis Ababa · Piassa (next to the main municipality building)"],"om":["Waajjira Magaalaa Aanaa Araadaa","Finfinnee · Piyaasaa (cinaa ijaarsa Magaalaa ijoo)"]},"municipality-05":{"a":["የቂርቆስ ክፍለ ከተማ ማዘጋጃ ቤት","አዲስ አበባ · ላንቻ (በአፍሪካ ጎዳና፣ ከግሎባል ሆቴል ፊት ለፊት)"],"en":["Kirkos Sub-city Municipality","Addis Ababa · Lancha (on Africa Avenue, opposite Global Hotel)"],"om":["Waajjira Magaalaa Aanaa Kirkoos","Finfinnee · Laanchaa (Daandii Afrikaa, Hoteela Gloobaal fuuldura)"]},"municipality-06":{"a":["የልደታ ክፍለ ከተማ ማዘጋጃ ቤት","አዲስ አበባ · ልደታ (ከፍተኛ ፍርድ ቤት አቅራቢያ)"],"en":["Lideta Sub-city Municipality","Addis Ababa · Lideta (near the Federal High Court)"],"om":["Waajjira Magaalaa Aanaa Liidataa","Finfinnee · Liidataa (Mana Murtii Olaanaa Federaalaa bira)"]},"municipality-07":{"a":["የንፋስ ስልክ ላፍቶ ክፍለ ከተማ ማዘጋጃ ቤት","አዲስ አበባ · ሳር ቤት (ከኦሮሚያ ፖሊስ ኮሚሽን ፊት ለፊት)"],"en":["Nifas Silk-Lafto Sub-city Municipality","Addis Ababa · Sarbet (opposite the Oromia Police Commission)"],"om":["Waajjira Magaalaa Aanaa Nifas Silk-Laaftoo","Finfinnee · Saar Bet (Komishinii Poolisii Oromiyaa fuuldura)"]},"municipality-08":{"a":["የአቃቂ ቃሊቲ ክፍለ ከተማ ማዘጋጃ ቤት","አዲስ አበባ · ቃሊቲ (ከቃሊቲ መብራት ኃይል ማዕከል አጠገብ)"],"en":["Akaki Kality Sub-city Municipality","Addis Ababa · Kality (next to the Kality power center)"],"om":["Waajjira Magaalaa Aanaa Akaaqii Qaaliitii","Finfinnee · Qaaliitii (wiirtuu humna ibsaa Qaaliitii bira)"]},"municipality-09":{"a":["የኮልፌ ቀራንዮ ክፍለ ከተማ ማዘጋጃ ቤት","አዲስ አበባ · ጦር ኃይሎች (ወደ ጦር ኃይሎች ሆስፒታል መታጠፊያ ላይ)"],"en":["Kolfe Keranio Sub-city Municipality","Addis Ababa · Tor Hailoch (at the turn to Armed Forces Hospital)"],"om":["Waajjira Magaalaa Aanaa Kolfee Qaraanyoo","Finfinnee · Tor Hayiloch (jijjiirraa Hospitaala Humna Ittisaa irra)"]},"municipality-10":{"a":["የአዲስ ከተማ ክፍለ ከተማ ማዘጋጃ ቤት","አዲስ አበባ · መርካቶ (ከተክለሃይማኖት ወደ ሰባተኛ በሚወስደው መንገድ)"],"en":["Addis Ketema Sub-city Municipality","Addis Ababa · Merkato (on the road from Tekle Haimanot to Sebategna)"],"om":["Waajjira Magaalaa Aanaa Addis Ketema","Finfinnee · Merkaatoo (daandii Tekle Haayimaanoot irraa gara Sabbataatti geessu irra)"]},"municipality-11":{"a":["የጉለሌ ክፍለ ከተማ ማዘጋጃ ቤት","አዲስ አበባ · ሩፋኤል (ከቅዱስ ሩፋኤል ቤተክርስቲያን ወረድ ብሎ)"],"en":["Gulele Sub-city Municipality","Addis Ababa · Rufael (just below St. Raphael Church)"],"om":["Waajjira Magaalaa Aanaa Guleelee","Finfinnee · Ruufaa’eel (Mana Kiristaanaa Seent Ruufaa’eel gadi)"]},"banks-01":{"a":["የኢትዮጵያ ንግድ ባንክ (CBE)","የባንክ የጥሪ ማዕከል"],"en":["Commercial Bank of Ethiopia (CBE)","Bank call center"],"om":["Baankii Daldalaa Itoophiyaa (CBE)","Wiirtuu bilbilaa baankii"]},"banks-02":{"a":["የኢትዮጵያ ልማት ባንክ (DBE)","የባንክ የጥሪ ማዕከል"],"en":["Development Bank of Ethiopia (DBE)","Bank call center"],"om":["Baankii Misooma Itoophiyaa (DBE)","Wiirtuu bilbilaa baankii"]},"banks-03":{"a":["አዋሽ ባንክ (Awash Bank)","የባንክ የጥሪ ማዕከል"],"en":["Awash Bank","Bank call center"],"om":["Baankii Awaash","Wiirtuu bilbilaa baankii"]},"banks-04":{"a":["ዳሽን ባንክ (Dashen Bank)","የባንክ የጥሪ ማዕከል"],"en":["Dashen Bank","Bank call center"],"om":["Baankii Daashan","Wiirtuu bilbilaa baankii"]},"banks-05":{"a":["የአቢሲኒያ ባንክ (Bank of Abyssinia)","የባንክ የጥሪ ማዕከል"],"en":["Bank of Abyssinia","Bank call center"],"om":["Baankii Abbisiiniyaa","Wiirtuu bilbilaa baankii"]},"banks-06":{"a":["ኦሮሚያ ህብረት ስራ ባንክ (Coopbank)","የባንክ የጥሪ ማዕከል"],"en":["Oromia Cooperative Bank (Coopbank)","Bank call center"],"om":["Baankii Hawaasa Oromiyaa (Coopbank)","Wiirtuu bilbilaa baankii"]},"banks-07":{"a":["ወጋገን ባንክ (Wegagen Bank)","የባንክ የጥሪ ማዕከል"],"en":["Wegagen Bank","Bank call center"],"om":["Baankii Wagagan","Wiirtuu bilbilaa baankii"]},"banks-08":{"a":["ንብ ኢንተርናሽናል ባንክ (Nib Bank)","የባንክ የጥሪ ማዕከል"],"en":["Nib International Bank","Bank call center"],"om":["Baankii Idil-addunyaa Nib","Wiirtuu bilbilaa baankii"]},"banks-09":{"a":["ቡና ባንክ (Bunna Bank)","የባንክ የጥሪ ማዕከል"],"en":["Bunna Bank","Bank call center"],"om":["Baankii Bunnaa","Wiirtuu bilbilaa baankii"]},"banks-10":{"a":["ብርሃን ባንክ (Berhan Bank)","የባንክ የጥሪ ማዕከል"],"en":["Berhan Bank","Bank call center"],"om":["Baankii Birhaan","Wiirtuu bilbilaa baankii"]},"banks-11":{"a":["አንበሳ ኢንተርናሽናል ባንክ (Lion Bank)","የባንክ የጥሪ ማዕከል"],"en":["Lion International Bank","Bank call center"],"om":["Baankii Idil-addunyaa Leenca (Lion)","Wiirtuu bilbilaa baankii"]},"banks-12":{"a":["አባይ ባንክ (Abay Bank)","የባንክ የጥሪ ማዕከል"],"en":["Abay Bank","Bank call center"],"om":["Baankii Abbaay","Wiirtuu bilbilaa baankii"]},"banks-13":{"a":["ኦሮሚያ ኢንተርናሽናል ባንክ (OIB)","የባንክ የጥሪ ማዕከል"],"en":["Oromia International Bank (OIB)","Bank call center"],"om":["Baankii Idil-addunyaa Oromiyaa (OIB)","Wiirtuu bilbilaa baankii"]},"banks-14":{"a":["ዘመን ባንክ (Zemen Bank)","የባንክ የጥሪ ማዕከል"],"en":["Zemen Bank","Bank call center"],"om":["Baankii Zemen","Wiirtuu bilbilaa baankii"]},"banks-15":{"a":["ግሎባል ህብረት ባንክ (Global Bank)","የባንክ የጥሪ ማዕከል"],"en":["Global Bank Ethiopia","Bank call center"],"om":["Baankii Gloobaal Itoophiyaa","Wiirtuu bilbilaa baankii"]},"banks-16":{"a":["አማራ ባንክ (Amhara Bank)","የባንክ የጥሪ ማዕከል"],"en":["Amhara Bank","Bank call center"],"om":["Baankii Amaaraa","Wiirtuu bilbilaa baankii"]},"banks-17":{"a":["ሲንቄ ባንክ (Siinqee Bank)","የባንክ የጥሪ ማዕከል"],"en":["Siinqee Bank","Bank call center"],"om":["Baankii Siinqee","Wiirtuu bilbilaa baankii"]},"banks-18":{"a":["ዘምዘም ባንክ (ZamZam Bank - ወለድ አልባ)","የባንክ የጥሪ ማዕከል"],"en":["ZamZam Bank (interest-free)","Bank call center"],"om":["Baankii ZamZam (dhala malee)","Wiirtuu bilbilaa baankii"]},"banks-19":{"a":["ሂጅራ ባንክ (Hijra Bank - ወለድ አልባ)","የባንክ የጥሪ ማዕከል"],"en":["Hijra Bank (interest-free)","Bank call center"],"om":["Baankii Hijraa (dhala malee)","Wiirtuu bilbilaa baankii"]},"banks-20":{"a":["ገዳ ባንክ (Gadaa Bank)","የባንክ የጥሪ ማዕከል"],"en":["Gadaa Bank","Bank call center"],"om":["Baankii Gadaa","Wiirtuu bilbilaa baankii"]},"banks-21":{"a":["ሸገር ባንክ (Sheger Bank)","የባንክ የጥሪ ማዕከል"],"en":["Sheger Bank","Bank call center"],"om":["Baankii Sheger","Wiirtuu bilbilaa baankii"]},"banks-22":{"a":["ጸሀይ ባንክ (Tsehay Bank)","የባንክ የጥሪ ማዕከል"],"en":["Tsehay Bank","Bank call center"],"om":["Baankii Tsehay","Wiirtuu bilbilaa baankii"]},"banks-23":{"a":["አሀዱ ባንክ (Ahadu Bank)","የባንክ የጥሪ ማዕከል"],"en":["Ahadu Bank","Bank call center"],"om":["Baankii Ahaduu","Wiirtuu bilbilaa baankii"]},"banks-24":{"a":["ሲዳማ ባንክ (Sidama Bank)","የባንክ የጥሪ ማዕከል"],"en":["Sidama Bank","Bank call center"],"om":["Baankii Sidaamaa","Wiirtuu bilbilaa baankii"]},"banks-25":{"a":["እናት ባንክ (Enat Bank)","የባንክ የጥሪ ማዕከል"],"en":["Enat Bank","Bank call center"],"om":["Baankii Enat","Wiirtuu bilbilaa baankii"]},"others-01":{"a":["የፌደራልና የአዲስ አበባ ፖሊስ ኮማንድ ፖስት","ለሁሉም አይነት የወንጀልና የድንገተኛ አደጋዎች ጥቆማ መቀበያ"],"en":["Federal and Addis Ababa Police command post","Receives tips about all kinds of crime and emergencies"],"om":["Poolisii Federaalaa fi Finfinnee Giddugala Ajajaa","Gabaasa gosa yakkaa fi balaa tasaa hundaa fudhata"]},"others-02":{"a":["የኢፌድሪ ሰብአዊ መብት ኮሚሽን","የሰብአዊ መብት ጥሰቶችንና ቅሬታዎችን ለማቅረብ"],"en":["Ethiopian Human Rights Commission","To file human rights violations and complaints"],"om":["Komishinii Mirga Dhala Namaa Itoophiyaa","Cabsa mirga namoomaa fi komii dhiyeessuuf"]},"others-03":{"a":["የፌደራል ጠቅላይ ፍርድ ቤት","የፍርድ ቤት መረጃዎችን እና የጉዳዮችን ሂደት ለመከታተል"],"en":["Federal Supreme Court","To follow court information and the progress of cases"],"om":["Mana Murtii Waliigalaa Federaalaa","Odeeffannoo mana murtii fi adeemsa dhimmootaa hordofuuf"]},"others-04":{"a":["የብሔራዊ መረጃና ደህንነት አገልግሎት (NISS)","የሀገር ደህንነት ስጋቶችንና ጥቆማዎችን ለመስጠት"],"en":["National Intelligence and Security Service (NISS)","To report national security threats and tips"],"om":["Tajaajila Ayyaana fi Nageenya Biyyaalessaa (NISS)","Yaaddoo nageenya biyyaa fi gabaasa dhiyeessuuf"]},"others-05":{"a":["የህፃናት ጥበቃ እና የእርዳታ መስመር","በህፃናት ላይ የሚደርሱ ጥቃቶችን ሪፖርት ማድረጊያ እና የስነ-ልቦና ድጋፍ"],"en":["Child protection and support line","To report violence against children and for psychological support"],"om":["Lakkoofsa Eegumsaa fi Gargaarsa Daa’imman","Miidhaa daa’imman irra gahu gabaasuu fi deeggarsa sammuu argachuuf"]},"others-06":{"a":["የሴቶች ጥቃት መከላከያ እና የህግ ምክር መስመር","በሴቶች ላይ የሚደርሱ ጾታዊና አካላዊ ጥቃቶችን ሪፖርት ማድረጊያ"],"en":["Women’s violence prevention and legal advice line","To report sexual and physical violence against women"],"om":["Lakkoofsa Ittisa Miidhaa Dubartootaa fi Gorsa Seeraa","Miidhaa saalaa fi qaamaa dubartootatti raawwatamu gabaasuuf"]},"others-07":{"a":["የአዕምሮ ጤና እና የጭንቀት ማማከሪያ መስመር","ከፍተኛ ጭንቀት ወይም የስነ-ልቦና ቀውስ ለገጠማቸው ሰዎች ነጻ የምክር አገልግሎት"],"en":["Mental health and stress counseling line","Free counseling for people with severe stress or a psychological crisis"],"om":["Lakkoofsa Gorsa Fayyaa Sammuu fi Dhiphina","Namoota dhiphina cimaa ykn rakkoo sammuu qabaniif gorsa bilisaa"]},"others-08":{"a":["የኢትዮ-ጅቡቲ ምድር ባቡር","የባቡር ጉዞ መርሃ-ግብር እና የትኬት መረጃ ማዕከል"],"en":["Ethio-Djibouti Railway","Train schedule and ticket information center"],"om":["Baaburii Itoyo-Jibuutii","Wiirtuu odeeffannoo sagantaa imala baaburaa fi tikeetii"]},"others-09":{"a":["የአዲስ አበባ ትራፊክ ማኔጅመንት","የትራፊክ መጨናነቅ እና አደጋዎችን ሪፖርት ማድረጊያ"],"en":["Addis Ababa Traffic Management","Report traffic congestion and accidents"],"om":["Bulchiinsa Tiraafikaa Finfinnee","Cinqamiinsa tiraafikaa fi balaa gabaasuuf"]},"others-10":{"a":["የኢትዮጵያ አየር መንገድ የደንበኞች አገልግሎት","የበረራ መረጃ ማግኛ ማዕከል"],"en":["Ethiopian Airlines customer service","Flight information center"],"om":["Tajaajila Maamilaa Ethiopian Airlines","Wiirtuu odeeffannoo balali’aa (xiyyaaraa)"]},"others-11":{"a":["የኢፌድሪ የገቢዎች ሚኒስቴር","ስለ ታክስ፣ ግብር እና ተያያዥ ህጎች መረጃ ማግኛ"],"en":["Ministry of Revenues","Information about taxes, duties and related laws"],"om":["Ministeera Galiiwwanii","Odeeffannoo gibiraa, ramaddii fi seerota walqabatan"]},"others-12":{"a":["የንግድና ቀጣናዊ ትስስር ሚኒስቴር","ያልተገባ የዋጋ ጭማሪን፣ ህገ-ወጥ ንግድን እና የኮንትሮባንድ ጥቆማዎችን መቀበያ"],"en":["Ministry of Trade and Regional Integration","Receives tips on unfair price increases, illegal trade and contraband"],"om":["Ministeera Daldalaa fi Walitti Hidhamiinsa Naannoo","Gatii malee dabaluu, daldala seeraan alaa fi koontirabaandii gabaasa fudhata"]}};
+function bTr(br, idx) {
+    const l = state.currentLang;
+    if (l !== 'am') {
+        const t = BRANCH_I18N[br.id];
+        if (t && t[l] && t.a[0] === br.name && t.a[1] === br.location) return t[l][idx];
+    }
+    return idx ? br.location : br.name;
+}
+
 const PUBLIC_DATA_URL = 'https://belayzabe2020-lgtm.github.io/ethio-mereja/data.json';
 
 window.__readGuestFavs = function () {
@@ -1876,6 +1812,7 @@ restoreState();
         };
 
         function navigateTo(routeId, fromHistory = false) {
+            if (routeId === 'menu') routeId = 'home';      // the menu page no longer exists
             const publicRoutes = new Set(['splash', 'login', 'register', 'admin-login']);
             const adminRoutes = new Set(['admin-dashboard']);
             const protectedRoutes = new Set(['home', 'branches', 'search', 'services', 'favorites', 'notifications', 'menu', 'profile', 'emergency']);
@@ -2030,7 +1967,7 @@ async function logoutUser() {
     state.favorites = [];
     persistState();
     showToast('ከመለያዎ ወጥተዋል');
-    navigateTo('login');
+    navigateTo('splash');
 }
 
 async function handleAdminLogin(e) {
@@ -2077,7 +2014,7 @@ async function logoutAdmin() {
     try { localStorage.removeItem('ethioMerejaFavorites_v1'); } catch (_) {}
     persistState();
     showToast('ከአስተዳዳሪ ሰሌዳ ወጥተዋል');
-    navigateTo('login');
+    navigateTo('splash');
 }
 
 function renderEmergencyView() {
@@ -2128,7 +2065,7 @@ function renderEmergencyView() {
             if (state.currentUser) {
                 userNameEl.innerText = state.currentUser.fullname;
             } else {
-                userNameEl.innerText = "ተጠቃሚ (Guest)";
+                userNameEl.innerText = "እንኳን ደህና መጡ";
             }
 
             const grid = document.getElementById('home-services-grid');
@@ -2207,9 +2144,9 @@ function renderEmergencyView() {
                 card.innerHTML = `
                     <div class="flex justify-between items-start">
                         <div class="flex-1 pr-2">
-                            <h4 class="text-sm font-bold text-slate-900 leading-tight">${br.name}</h4>
+                            <h4 class="text-sm font-bold text-slate-900 leading-tight">${bTr(br, 0)}</h4>
                             <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
-                                <i class="fa-solid fa-location-dot text-ethio-600"></i> ${br.location}
+                                <i class="fa-solid fa-location-dot text-ethio-600"></i> ${bTr(br, 1)}
                             </p>
                         </div>
                         <button onclick="toggleFavorite('${br.id}')" class="p-2 text-base transition ${isFav ? 'text-red-500' : 'text-slate-300 hover:text-red-400'}">
@@ -2302,7 +2239,8 @@ function renderFavoritesView() {
             const matchedBranches = state.branches.filter(b => {
                 const service = state.services.find(s => s.id === b.category);
                 const serviceText = service ? Object.values(service.title || {}).join(' ') : '';
-                const haystack = `${b.name} ${b.location} ${b.phone} ${serviceText}`.toLowerCase();
+                const tr = BRANCH_I18N[b.id]; const trText = tr ? tr.en.concat(tr.om).join(' ') : '';   // searchable in every language
+                const haystack = `${b.name} ${b.location} ${b.phone} ${serviceText} ${trText}`.toLowerCase();
                 const matchesQuery = !q || haystack.includes(q);
                 const matchesCity = city === 'all' || b.location.toLowerCase().includes(city.toLowerCase());
                 return matchesQuery && matchesCity;
@@ -3023,7 +2961,7 @@ function openLanguageModal() {
             document.getElementById('nav-lbl-search').innerText = dict.navSearch;
             document.getElementById('nav-lbl-services').innerText = dict.navServices;
             document.getElementById('nav-lbl-favorites').innerText = dict.navFav;
-            document.getElementById('nav-lbl-menu').innerText = dict.navMenu;
+            { const m = document.getElementById('nav-lbl-menu'); if (m) m.innerText = dict.navMenu; }
             const setText = (id, value) => { const el = document.getElementById(id); if (el) el.innerText = value; };
             setText('home-greeting', dict.homeGreeting);
             setText('home-banner-text', dict.bannerText); setText('user-badge', dict.userBadge);
@@ -3647,6 +3585,19 @@ window.addEventListener('popstate', (event) => {
   }, { passive: false });
 })();
 </script>
+<script id="admin-shortcut">
+// Admin shortcut: tap the "App Creator By EYOB" line 5 times quickly (each tap within 1.5 s of the last).
+(function(){
+  let taps = 0, last = 0;
+  document.addEventListener('click', function(e){
+    const t = e.target && e.target.closest ? e.target.closest('.app-credit') : null;
+    if (!t) return;
+    const now = Date.now();
+    taps = (now - last < 1500) ? taps + 1 : 1; last = now;
+    if (taps >= 5) { taps = 0; navigateTo(state.isAdminLoggedIn ? 'admin-dashboard' : 'admin-login'); }
+  });
+})();
+</script>
 <script id="guest-mode">
 (function(){
   window.enterGuest = function(){
@@ -3713,6 +3664,7 @@ window.addEventListener('popstate', (event) => {
     'የተጎጂው ሁኔታ፦': {en:'Condition of the patient:', om:'Haala dhukkubsataa:'},
     'አደጋው የተከሰተበትን ክፍለ ከተማ፣ ወረዳ እና በአቅራቢያ የሚገኝ ታዋቂ መለያ ምልክት (ህንፃ፣ ትምህርት ቤት ወይም ቤተክርስቲያን) ያስረዱ።': {en:'Say the sub-city and district where it happened and a well-known landmark nearby (a building, school or church).', om:'Aanaa fi ganda miidhaan itti ta\u2019e akkasumas mallattoo beekamaa naannoo sanaa (ijaarsa, mana barumsaa ykn mana kiristaanaa) ibsi.'},
     'ህመምተኛው ነፍሰ ጡር ናት? የትራፊክ አደጋ ነው? ወይስ ድንገተኛ የልብ ህመም? የሚለውን መግለጽ ተገቢውን ባለሙያ የያዘ አምቡላንስ ለመላክ ይረዳል።': {en:'Is the patient pregnant? A traffic accident? A sudden heart problem? Telling this helps send an ambulance with the right professionals.', om:'Dhukkubsataan ulfa? Rakkoo tiraafikaa? Ykn dhukkuba onnee tasaa? Kana ibsuun ambulaansii ogeessa sirrii qabu ergisiisuuf gargaara.'},
+    'እንኳን ደህና መጡ': {en:'Welcome', om:'Baga nagaan dhuftan'},
     'አሁን': {en:'Now', om:'Amma'},
     'ትናንት': {en:'Yesterday', om:'Kaleessa'},
     'አዲስ አበባ': {en:'Addis Ababa', om:'Finfinnee'},
