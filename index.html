@@ -656,16 +656,16 @@ html, body { overscroll-behavior-y: contain !important; }
                     <!-- 1. Change Password Box -->
                     <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700 space-y-3">
                         <h4 class="text-xs font-bold text-amber-400 uppercase flex items-center gap-1.5">
-                            <i class="fa-solid fa-key"></i> የፓስወርድ ማስተካከያ (Change Password)
+                            <i class="fa-solid fa-key"></i> የምስጢር ቁጥር ማስተካከያ
                         </h4>
                         <form onsubmit="handleAdminChangePassword(event)" class="space-y-2.5">
                             <div>
-                                <label class="block text-[11px] text-slate-300 mb-1">የአሁኑ የአስተዳዳሪ ምስጢር ቁጥር (Current Password)</label>
+                                <label class="block text-[11px] text-slate-300 mb-1">የአሁኑ የአስተዳዳሪ ምስጢር ቁጥር</label>
                                 <input type="password" id="admin-current-pass" required autocomplete="current-password" placeholder="••••••••"
                                        class="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white focus:outline-none focus:border-amber-400">
                             </div>
                             <div>
-                                <label class="block text-[11px] text-slate-300 mb-1">አዲስ የአስተዳዳሪ ምስጢር ቁጥር (New Password)</label>
+                                <label class="block text-[11px] text-slate-300 mb-1">አዲስ የአስተዳዳሪ ምስጢር ቁጥር</label>
                                 <input type="password" id="admin-new-pass" required minlength="6" placeholder="••••••••"
                                        class="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white focus:outline-none focus:border-amber-400">
                             </div>
@@ -678,16 +678,16 @@ html, body { overscroll-behavior-y: contain !important; }
                     <!-- 2. Broadcast Notification Box -->
                     <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700 space-y-3">
                         <h4 class="text-xs font-bold text-blue-400 uppercase flex items-center gap-1.5">
-                            <i class="fa-solid fa-bullhorn"></i> ማስታወቂያ ለተጠቃሚዎች ላክ (Send Notification)
+                            <i class="fa-solid fa-bullhorn"></i> ማስታወቂያ ለተጠቃሚዎች ላክ
                         </h4>
                         <form onsubmit="handleAdminSendNotification(event)" class="space-y-2.5">
                             <div>
-                                <label class="block text-[11px] text-slate-300 mb-1">የማስታወቂያ ርዕስ (Title)</label>
+                                <label class="block text-[11px] text-slate-300 mb-1">የማስታወቂያ ርዕስ</label>
                                 <input type="text" id="admin-notif-title" required placeholder="ለምሳሌ፡ የአገልግሎት ማሻሻያ"
                                        class="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white focus:outline-none focus:border-blue-400">
                             </div>
                             <div>
-                                <label class="block text-[11px] text-slate-300 mb-1">የማስታወቂያው ዝርዝር መልዕክት (Body Message)</label>
+                                <label class="block text-[11px] text-slate-300 mb-1">የማስታወቂያው ዝርዝር መልዕክት</label>
                                 <textarea id="admin-notif-body" required rows="2" placeholder="የማስታወቂያውን ዝርዝር መረጃ እዚህ ይጻፉ..."
                                           class="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white focus:outline-none focus:border-blue-400"></textarea>
                             </div>
@@ -729,7 +729,7 @@ html, body { overscroll-behavior-y: contain !important; }
                     <!-- 5. Reset Data Option -->
                     <div class="bg-red-50 p-4 rounded-2xl border-2 border-red-300 space-y-2 shadow-sm">
                         <h4 class="text-xs font-bold text-red-400 uppercase flex items-center gap-1.5">
-                            <i class="fa-solid fa-triangle-exclamation"></i> ዳታ ወደነበረበት መልስ (Reset Data)
+                            <i class="fa-solid fa-triangle-exclamation"></i> ዳታ ወደነበረበት መልስ
                         </h4>
                         <p class="text-[11px] text-red-700">የመጀመሪያዎቹን ነባሪ አገልግሎቶች እና ቅርንጫፎች ይመልሳል።</p>
                         <button id="admin-reset-data-btn" onclick="resetDataAdmin()" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white border border-red-700 rounded-xl text-xs font-bold transition shadow-sm">
@@ -811,19 +811,19 @@ html, body { overscroll-behavior-y: contain !important; }
                         <input type="text" id="admin-service-title-am" required class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-amber-400">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Service Title (English)</label>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">የአገልግሎት ርዕስ (በእንግሊዝኛ)</label>
                         <input type="text" id="admin-service-title-en" required class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-amber-400">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Maqaa Tajaajilaa (Afaan Oromo)</label>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">የአገልግሎት ርዕስ (በኦሮምኛ)</label>
                         <input type="text" id="admin-service-title-om" required class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-amber-400">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">FontAwesome Icon Class</label>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">የአዶ ስም (FontAwesome)</label>
                         <input type="text" id="admin-service-icon" placeholder="fa-droplet" required class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-amber-400 font-mono">
                     </div>
                     <button type="submit" class="w-full py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-xl text-xs transition mt-2">
-                        አስቀምጥ (Save Service)
+                        አገልግሎቱን አስቀምጥ
                     </button>
                 </form>
             </div>
@@ -859,7 +859,7 @@ html, body { overscroll-behavior-y: contain !important; }
                         <input type="tel" id="admin-branch-phone" placeholder="0116611111" class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs focus:outline-none focus:border-blue-400 font-mono">
                     </div>
                     <button type="submit" class="w-full py-2.5 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl text-xs transition mt-2">
-                        አስቀምጥ (Save Branch)
+                        ቅርንጫፉን አስቀምጥ
                     </button>
                 </form>
             </div>
@@ -1176,6 +1176,23 @@ function bTr(br, idx) {
     return idx ? br.location : br.name;
 }
 
+// "5 minutes ago" computed from the real date (older data without a date keeps its saved text).
+function notifTime(n) {
+    const l = (state && state.currentLang) || 'am';
+    const ts = n && n.created_at ? Date.parse(n.created_at) : NaN;
+    if (isNaN(ts)) return (n && n.time) || '';
+    const min = Math.floor(Math.max(0, Date.now() - ts) / 60000), hr = Math.floor(min / 60), day = Math.floor(hr / 24);
+    const T = {
+        am: { now: 'አሁን', m: x => x + ' ደቂቃ በፊት', h: x => x + ' ሰዓት በፊት', d: x => x + ' ቀን በፊት' },
+        en: { now: 'Just now', m: x => x + ' min ago', h: x => x + ' h ago', d: x => x + ' d ago' },
+        om: { now: 'Amma', m: x => 'Daqiiqaa ' + x + ' dura', h: x => 'Sa\u2019aatii ' + x + ' dura', d: x => 'Guyyaa ' + x + ' dura' }
+    }[l] || null;
+    if (!T) return (n && n.time) || '';
+    if (min < 1) return T.now; if (min < 60) return T.m(min); if (hr < 24) return T.h(hr); if (day < 7) return T.d(day);
+    const d = new Date(ts); const p = v => String(v).padStart(2, '0');
+    return p(d.getDate()) + '/' + p(d.getMonth() + 1) + '/' + d.getFullYear();
+}
+
 const PUBLIC_DATA_URL = 'https://belayzabe2020-lgtm.github.io/ethio-mereja/data.json';
 
 window.__readGuestFavs = function () {
@@ -1333,7 +1350,7 @@ async function syncPublicData() {
         title: normalizeLocalized(x.title),
         body: normalizeLocalized(x.body),
         read: reads.has(x.id) || !!x.read,
-        time: x.time || ''
+        time: x.time || '', created_at: x.created_at || ''
     }));
     const localNotifications = loadLocalNotifications();
     const merged = [...remoteNotifications];
@@ -2034,7 +2051,7 @@ function renderEmergencyView() {
                 om: { t: 'Beeksisa', all: 'Hunda ilaali' }
             }[lang] || { t: 'ማስታወቂያ', all: 'ሁሉንም እይ' };
             const pick = v => (v && (v[lang] || v.am || v.en || v.om)) || '';
-            const sig = lang + '|' + items.map(n => [n.id, pick(n.title), pick(n.body), n.time, n.read ? 1 : 0].join('~')).join('||');
+            const sig = lang + '|' + items.map(n => [n.id, pick(n.title), pick(n.body), notifTime(n), n.read ? 1 : 0].join('~')).join('||');
             document.getElementById('title-announcements').textContent = L.t;
             document.getElementById('btn-all-announcements').textContent = L.all;
             box.classList.remove('hidden');
@@ -2049,7 +2066,7 @@ function renderEmergencyView() {
                 const h = document.createElement('h4'); h.className = 'text-xs font-bold text-slate-900 flex items-center gap-1.5';
                 if (!n.read) { const dot = document.createElement('span'); dot.className = 'w-2 h-2 rounded-full bg-ethio-600 shrink-0'; h.appendChild(dot); }
                 h.appendChild(document.createTextNode(pick(n.title)));
-                const tm = document.createElement('span'); tm.className = 'text-[10px] text-slate-500 shrink-0'; tm.textContent = n.time || '';
+                const tm = document.createElement('span'); tm.className = 'text-[10px] text-slate-500 shrink-0'; tm.textContent = notifTime(n);
                 top.appendChild(h); top.appendChild(tm);
                 const p = document.createElement('p'); p.className = 'text-xs text-slate-600 leading-relaxed'; p.style.cssText = 'display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden';
                 p.textContent = pick(n.body);
@@ -2312,7 +2329,7 @@ function renderFavoritesView() {
                             ${!n.read ? '<span class="w-2 h-2 rounded-full bg-ethio-600"></span>' : ''}
                             ${title}
                         </h4>
-                        <span class="text-[10px] text-slate-500">${n.time}</span>
+                        <span class="text-[10px] text-slate-500">${notifTime(n)}</span>
                     </div>
                     <p class="text-xs text-slate-600 leading-relaxed">${body}</p>
                 `;
@@ -2408,7 +2425,7 @@ function switchAdminTab(tab) {
         const back = document.createElement('button');
         back.type = 'button';
         back.className = 'admin-back-menu';
-        back.innerHTML = '<i class="fa-solid fa-arrow-left"></i> ወደ Admin ዋና ሜኑ';
+        back.innerHTML = '<i class="fa-solid fa-arrow-left"></i> ወደ አስተዳዳሪ ዋና ገጽ';
         back.onclick = () => {
             state.adminActiveTab = 'services';
             switchAdminTab('services');
@@ -2524,7 +2541,7 @@ function renderAdminUsersList(appendOnly) {
         txt.appendChild(h); txt.appendChild(p); left.appendChild(av); left.appendChild(txt);
         const badge = document.createElement('span');
         badge.className = 'text-[10px] px-2 py-1 rounded-full font-bold shrink-0 ' + (u.role === 'admin' ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700');
-        badge.textContent = u.role === 'admin' ? 'Admin' : 'Active';
+        badge.textContent = u.role === 'admin' ? 'አስተዳዳሪ' : 'ንቁ';
         item.appendChild(left); item.appendChild(badge); frag.appendChild(item);
     });
     list.appendChild(frag);
@@ -3013,7 +3030,10 @@ function openLanguageModal() {
             document.querySelectorAll('#view-container button, #view-container h1, #view-container h2, #view-container h3, #view-container h4, #view-container h5, #view-container p, #view-container label, #view-container span').forEach(el => {
                 if (el.children.length) return;
                 const t = (el.textContent || '').trim();
-                if (Object.prototype.hasOwnProperty.call(map,t)) el.textContent = map[t];
+                // Remember the Amharic original so the text can go back to Amharic or on to another language.
+                const base = el.dataset.amOrig || t;
+                if (lang === 'am') { if (el.dataset.amOrig) { el.textContent = el.dataset.amOrig; delete el.dataset.amOrig; } return; }
+                if (Object.prototype.hasOwnProperty.call(map, base)) { if (!el.dataset.amOrig) el.dataset.amOrig = base; el.textContent = map[base]; }
             });
             // Admin identity and title remain consistent with the selected language.
             if (lang === 'en') { setText('admin-dashboard-title','Admin Dashboard'); setText('admin-dashboard-subtitle','Administrator Control Panel'); }
@@ -3027,7 +3047,7 @@ function openLanguageModal() {
             };
             const pm = phraseMap[lang] || {};
             document.querySelectorAll('#view-container h1,#view-container h2,#view-container h3,#view-container h4,#view-container p,#view-container label,#view-container button,#view-container span').forEach(el=>{
-              if(el.children.length) return; const t=(el.textContent||'').trim(); if(pm[t]) el.textContent=pm[t];
+              if(el.children.length) return; const t=(el.textContent||'').trim(); const base=el.dataset.amOrig||t; if(lang==='am'){ if(el.dataset.amOrig){ el.textContent=el.dataset.amOrig; delete el.dataset.amOrig; } return; } if(pm[base]){ if(!el.dataset.amOrig) el.dataset.amOrig=base; el.textContent=pm[base]; }
             });
 
             closeLanguageModal();
@@ -3137,7 +3157,7 @@ window.addEventListener('popstate', (event) => {
       function applyRaw(raw, reads) {
         state.services = raw.services.map(x => ({ id: x.id, title: x.title, icon: x.icon, color: x.color || 'bg-ethio-700' }));
         state.branches = raw.branches.map(x => ({ id: x.id, category: x.category, name: x.name, location: x.location || '', phone: x.phone || '' }));
-        state.notifications = (raw.notifications || []).map(x => ({ id: x.id, title: norm(x.title), body: norm(x.body), read: reads.has(x.id), time: x.time || '' }));
+        state.notifications = (raw.notifications || []).map(x => ({ id: x.id, title: norm(x.title), body: norm(x.body), read: reads.has(x.id), time: x.time || '', created_at: x.created_at || '' }));
         const logo = raw.logo_url || raw.logo_data_url || '';
         state.logoDataUrl = logo || localStorage.getItem('ethioMerejaAdminLogo_v1') || state.logoDataUrl || '';
         try { if (typeof applyAppLogo === 'function') applyAppLogo(); } catch (_) {}
@@ -3293,7 +3313,7 @@ window.addEventListener('popstate', (event) => {
     const body=document.getElementById('admin-notif-body')?.value.trim();
     if(!title||!body||!state.isAdminLoggedIn) return;
 
-    const n={id:'n_'+Date.now(),title:{am:title,en:title,om:title},body:{am:body,en:body,om:body},read:false,time:'አሁን'};
+    const n={id:'n_'+Date.now(),title:{am:title,en:title,om:title},body:{am:body,en:body,om:body},read:false,time:'አሁን',created_at:new Date().toISOString()};
     let remoteSaved=false;
     try{
       const r=await supabaseClient.from('notifications').insert({id:n.id,title:n.title,body:n.body,read:false,time:n.time});
@@ -3634,6 +3654,22 @@ window.addEventListener('popstate', (event) => {
     return r;
   };
   applyGuestUI();
+})();
+</script>
+<script id="admin-language">
+// The admin screens are Amharic only. If the visitor was reading the app in English/Oromo, switch to Amharic while in
+// the admin area and give the previous language back when leaving it.
+(function(){
+  let saved = null, busy = false;
+  const nav = window.navigateTo;
+  window.navigateTo = function(id){
+    if (!busy) {
+      const admin = /^admin/.test(String(id));
+      if (admin && state.currentLang !== 'am') { saved = state.currentLang; busy = true; try { window.setLanguage('am'); } finally { busy = false; } }
+      else if (!admin && saved) { const l = saved; saved = null; busy = true; try { window.setLanguage(l); } finally { busy = false; } }
+    }
+    return nav.apply(this, arguments);
+  };
 })();
 </script>
 <script id="i18n-completion">

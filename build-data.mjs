@@ -14,7 +14,7 @@ async function get(path) {
 const [services, branches, notifications, settings] = await Promise.all([
   get('services?select=id,title,icon,color&order=created_at.asc'),
   get('branches?select=id,category,name,location,phone&order=created_at.asc'),
-  get('notifications?select=id,title,body,time&order=created_at.desc&limit=30'),
+  get('notifications?select=id,title,body,time,created_at&order=created_at.desc&limit=30'),
   get('app_settings?select=content_version,logo_url,logo_data_url&id=eq.1'),
 ]);
 
