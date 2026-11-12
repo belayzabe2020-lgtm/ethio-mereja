@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ኢትዮ መረጃ - Ethio Mereja Public Services</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#075bd8">
+    <link rel="icon" type="image/png" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
     
     <!-- Supabase JavaScript client -->
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="window.__bootBackend && window.__bootBackend()"></script>
@@ -3643,6 +3647,20 @@ window.addEventListener('popstate', (event) => {
     requestAnimationFrame(function(){ queued = false; run(); });
   }).observe(document.body, { childList: true, subtree: true, characterData: true });
   run();
+})();
+</script>
+<script id="offline-support">
+// Works offline after the first visit: registers the service worker, which keeps the app and its libraries.
+(function(){
+  if (!('serviceWorker' in navigator) || !/^https?:$/.test(location.protocol)) return;
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('sw.js').then(function(){ return navigator.serviceWorker.ready; }).then(function(reg){
+      const urls = Array.from(document.querySelectorAll('script[src], link[rel="stylesheet"]'))
+        .map(function(el){ return el.src || el.href; })
+        .filter(function(u){ try { return new URL(u).origin !== location.origin; } catch(_) { return false; } });
+      if (reg.active && urls.length) reg.active.postMessage({ type: 'precache', urls: urls });
+    }).catch(function(){});
+  });
 })();
 </script>
 </body>
