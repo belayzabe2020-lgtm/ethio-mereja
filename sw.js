@@ -1,14 +1,11 @@
 // Ethio Mereja service worker: after the first online visit the whole app (page, Tailwind, icons, fonts) works offline.
-const VERSION = 'v2';
+const VERSION = 'v3';
 const SHELL = 'shell-' + VERSION;
 const LIBS = 'libs-' + VERSION;
 const PRECACHE = ['./', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png'];
 // Third-party files the page needs. They are saved while the worker installs, so the very first visit is enough.
 const LIB_URLS = [
-  'https://cdn.tailwindcss.com/3.4.17',
-  'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
-  'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@300;400;500;600;700;800&display=swap'
+  'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2'      // the only outside file; the design itself is built into index.html
 ];
 
 self.addEventListener('install', e => {
